@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>280</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Задача 35 – Параметри кола</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="margin">
+     <number>18</number>
+    </property>
+    <property name="spacing">
+     <number>10</number>
+    </property>
+
+    <!-- Рядок 0: заголовок -->
+    <item row="0" column="0" colspan="2">
+     <widget class="QLabel" name="lbl_title">
+      <property name="text">
+       <string>&lt;b&gt;Дано площу S кола. Знайти діаметр D і довжину L.&lt;/b&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Рядок 1: формули -->
+    <item row="1" column="0" colspan="2">
+     <widget class="QLabel" name="lbl_formulas">
+      <property name="text">
+       <string>L = π·D,   S = π·D²/4,   π = 3.14</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Рядок 2: введення S -->
+    <item row="2" column="0">
+     <widget class="QLabel" name="lbl_S">
+      <property name="text">
+       <string>Площа кола S:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="le_S">
+      <property name="placeholderText">
+       <string>Введіть значення S</string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Рядок 3: результат D -->
+    <item row="3" column="0">
+     <widget class="QLabel" name="lbl_D">
+      <property name="text">
+       <string>Діаметр D:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="lbl_D_result">
+      <property name="text">
+       <string>—</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Рядок 4: результат L -->
+    <item row="4" column="0">
+     <widget class="QLabel" name="lbl_L">
+      <property name="text">
+       <string>Довжина кола L:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLabel" name="lbl_L_result">
+      <property name="text">
+       <string>—</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Рядок 5: кнопки -->
+    <item row="5" column="0">
+     <widget class="QPushButton" name="btn_calculate">
+      <property name="text">
+       <string>Обчислити</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="btn_clear">
+      <property name="text">
+       <string>Очистити</string>
+      </property>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+
+  <!-- Меню -->
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>420</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actionLoad_from_file"/>
+    <addaction name="actionSave_to_file"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+
+  <widget class="QStatusBar" name="statusbar"/>
+
+  <action name="actionLoad_from_file">
+   <property name="text">
+    <string>Завантажити з файлу</string>
+   </property>
+  </action>
+  <action name="actionSave_to_file">
+   <property name="text">
+    <string>Зберегти результати</string>
+   </property>
+  </action>
+
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
